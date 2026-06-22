@@ -3,4 +3,4 @@ export const CAL_LINK = import.meta.env.VITE_CAL_LINK ?? ''
 
 export const CAL_BOOKING_URL = CAL_LINK ? `https://cal.com/${CAL_LINK}` : ''
 
-export const CONTACT_EMAIL = 'hello@nickelintelligence.com'
+export const CONTACT_EMAIL = 'hello@nickel-intelligence.com'

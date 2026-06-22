@@ -105,8 +105,8 @@ function App() {
                 <a href="#contact" className="btn btn-primary">
                   Book a free intro call
                 </a>
-                <a href="#coaching" className="btn btn-secondary">
-                  See what we work on
+                <a href="#approach" className="btn btn-secondary">
+                  How It Works
                 </a>
               </div>
               <div className="hero-stats">

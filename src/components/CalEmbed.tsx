@@ -1,8 +1,15 @@
 import { useEffect } from 'react'
 import Cal, { getCalApi } from '@calcom/embed-react'
-import { CAL_LINK } from '../config/cal'
 
-export default function CalEmbed() {
+type CalEmbedProps = {
+  calLink: string
+  envVarName?: string
+}
+
+export default function CalEmbed({
+  calLink,
+  envVarName = 'VITE_CAL_LINK',
+}: CalEmbedProps) {
   useEffect(() => {
     ;(async () => {
       const cal = await getCalApi()
@@ -18,11 +25,11 @@ export default function CalEmbed() {
     })()
   }, [])
 
-  if (!CAL_LINK) {
+  if (!calLink) {
     return (
       <p className="cal-setup-notice">
         Add your Cal.com link to <code>.env</code> as{' '}
-        <code>VITE_CAL_LINK=your-username/event-type</code>, then restart the
+        <code>{envVarName}=your-username/event-type</code>, then restart the
         dev server.
       </p>
     )
@@ -30,7 +37,7 @@ export default function CalEmbed() {
 
   return (
     <Cal
-      calLink={CAL_LINK}
+      calLink={calLink}
       className="cal-embed-frame"
       config={{ layout: 'month_view' }}
     />

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ContactSection from '../components/ContactSection'
+import { CAL_LINK } from '../config/cal'
 
 const COACHING_AREAS = [
   {
@@ -192,6 +193,8 @@ export default function CoachingPage() {
       </section>
 
       <ContactSection
+        calLink={CAL_LINK}
+        calEnvVarName="VITE_CAL_LINK"
         title="Let's see if we're a fit"
         lead="Book a free 30-minute intro call. Tell me what you're dealing with — I'll be honest about whether coaching is the right move, even if that means pointing you somewhere else."
         cardDescription="No prep required. Just come ready to talk about your role, your team, and what you'd like to be different six months from now."

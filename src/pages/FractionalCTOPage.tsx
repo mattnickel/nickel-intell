@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ContactSection from '../components/ContactSection'
+import { CAL_LINK_FRACTIONAL } from '../config/cal'
 
 const SERVICES = [
   {
@@ -193,6 +194,8 @@ export default function FractionalCTOPage() {
       </section>
 
       <ContactSection
+        calLink={CAL_LINK_FRACTIONAL}
+        calEnvVarName="VITE_CAL_LINK_FRACTIONAL"
         title="Let's talk about your technical roadmap"
         lead="Book a free discovery call. Tell me about your company, team, and what you're trying to build — I'll be straight about whether I can help."
         cardTitle="Schedule a discovery call"

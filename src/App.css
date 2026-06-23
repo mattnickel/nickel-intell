@@ -57,6 +57,10 @@
   color: var(--text);
 }
 
+.nav-active {
+  color: var(--text) !important;
+}
+
 .nav-cta {
   padding: 0.5rem 1rem;
   border-radius: 999px;
@@ -85,6 +89,39 @@
     transparent
   );
   pointer-events: none;
+}
+
+.hero--fractional::before {
+  background: radial-gradient(
+    ellipse 70% 50% at 50% -10%,
+    rgba(100, 149, 237, 0.1),
+    transparent
+  );
+}
+
+.offer-banner {
+  border-block: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.offer-banner-inner {
+  padding-block: 1rem;
+  text-align: center;
+}
+
+.offer-banner-inner p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+.offer-banner-inner a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.offer-banner-inner a:hover {
+  color: var(--accent-hover);
 }
 
 .hero-inner {

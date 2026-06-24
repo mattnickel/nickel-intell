@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
 
 const SECTION_NAV = [
-  { hash: '#approach', label: 'Approach' },
+  { hash: '#outcomes', label: 'Outcomes' },
+  { hash: '#packages', label: 'Engagements' },
   { hash: '#about', label: 'About' },
 ]
 
